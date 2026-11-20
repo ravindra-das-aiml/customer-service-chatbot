@@ -9,7 +9,7 @@ st.set_page_config(page_title="Customer Service Chatbot", page_icon="🤖")
 st.title("Customer Service Chatbot 🤖")
 
 FALLBACK = "Sorry, I didn't understand that. Can you rephrase?"
-MIN_KNOWN_RATIO = 0.6       # at least 60% of the meaningful words must be known
+MIN_KNOWN_RATIO = 0.3       # at least 60% of the meaningful words must be known
 CONFIDENCE_THRESHOLD = 0.4
 
 

@@ -2,68 +2,211 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon", "Good evening", "Hi there", "Hello there", "Hey there"],
-      "responses": ["Hello!", "Hi there!", "Welcome! How can I help you today?"]
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "Hi there",
+        "Hello there",
+        "Hey there"
+      ],
+      "responses": [
+        "Hello!",
+        "Hi there!",
+        "Welcome! How can I help you today?"
+      ]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "Goodbye", "See you later", "See you", "Talk to you later", "Have a nice day", "Take care"],
-      "responses": ["Goodbye!", "Have a nice day!", "Thank you for contacting us. Take care!"]
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "See you",
+        "Talk to you later",
+        "Have a nice day",
+        "Take care"
+      ],
+      "responses": [
+        "Goodbye!",
+        "Have a nice day!",
+        "Thank you for contacting us. Take care!"
+      ]
     },
     {
       "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "Thanks a lot", "Thank you so much", "Great, thanks", "Appreciate your help"],
-      "responses": ["You're welcome!", "Happy to help!", "Glad I could assist you."]
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Thanks a lot",
+        "Thank you so much",
+        "Great, thanks",
+        "Appreciate your help"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "Glad I could assist you."
+      ]
     },
     {
       "tag": "hours",
-      "patterns": ["Working hours", "Office timing", "What are your working hours", "When are you open", "What time do you open", "What time do you close", "Business hours", "Opening hours", "Store timing"],
-      "responses": ["We are open from 9 AM to 6 PM, Monday to Saturday."]
+      "patterns": [
+        "Working hours",
+        "Office timing",
+        "What are your working hours",
+        "When are you open",
+        "What time do you open",
+        "What time do you close",
+        "Business hours",
+        "Opening hours",
+        "Store timing"
+      ],
+      "responses": [
+        "We are open from 9 AM to 6 PM, Monday to Saturday."
+      ]
     },
     {
       "tag": "order_status",
-      "patterns": ["Where is my order", "Track my order", "Order status", "Check my order status", "When will my order arrive", "Order tracking", "I want to track my package", "Where is my package", "My order has not arrived"],
-      "responses": ["You can track your order from the 'My Orders' section using your order ID. Orders usually arrive within 3-5 working days."]
+      "patterns": [
+        "Where is my order",
+        "Track my order",
+        "Order status",
+        "Check my order status",
+        "When will my order arrive",
+        "Order tracking",
+        "I want to track my package",
+        "Where is my package",
+        "My order has not arrived"
+      ],
+      "responses": [
+        "You can track your order from the 'My Orders' section using your order ID. Orders usually arrive within 3-5 working days."
+      ]
     },
     {
       "tag": "cancel_order",
-      "patterns": ["Cancel my order", "I want to cancel my order", "How do I cancel an order", "Please cancel my purchase", "Cancel order"],
-      "responses": ["You can cancel your order from the 'My Orders' section before it is shipped. Once shipped, please contact support."]
+      "patterns": [
+        "Cancel my order",
+        "I want to cancel my order",
+        "How do I cancel an order",
+        "Please cancel my purchase",
+        "Cancel order"
+      ],
+      "responses": [
+        "You can cancel your order from the 'My Orders' section before it is shipped. Once shipped, please contact support."
+      ]
     },
     {
       "tag": "refund",
-      "patterns": ["I want a refund", "How do I get a refund", "Refund policy", "Return my product", "How can I return an item", "Return policy", "Money back", "When will I get my refund"],
-      "responses": ["You can request a return or refund within 7 days of delivery. Refunds are processed within 5-7 working days."]
+      "patterns": [
+        "I want a refund",
+        "How do I get a refund",
+        "Refund policy",
+        "Return my product",
+        "How can I return an item",
+        "Return policy",
+        "Money back",
+        "When will I get my refund"
+      ],
+      "responses": [
+        "You can request a return or refund within 7 days of delivery. Refunds are processed within 5-7 working days."
+      ]
     },
     {
       "tag": "payment",
-      "patterns": ["Payment methods", "How can I pay", "What payment options do you have", "Do you accept credit cards", "Can I pay by UPI", "Do you have cash on delivery", "Payment failed", "My payment is not going through"],
-      "responses": ["We accept credit/debit cards, UPI, net banking and cash on delivery. If your payment failed, please try again or use another method."]
+      "patterns": [
+        "Payment methods",
+        "How can I pay",
+        "What payment options do you have",
+        "Do you accept credit cards",
+        "Can I pay by UPI",
+        "Do you have cash on delivery",
+        "Payment failed",
+        "My payment is not going through"
+      ],
+      "responses": [
+        "We accept credit/debit cards, UPI, net banking and cash on delivery. If your payment failed, please try again or use another method."
+      ]
     },
     {
       "tag": "shipping",
-      "patterns": ["Shipping charges", "Delivery charges", "How long does delivery take", "Delivery time", "Do you offer free shipping", "Do you deliver to my city", "Shipping information"],
-      "responses": ["Delivery takes 3-5 working days. Shipping is free on orders above Rs. 500."]
+      "patterns": [
+        "Shipping charges",
+        "Delivery charges",
+        "How long does delivery take",
+        "Delivery time",
+        "Do you offer free shipping",
+        "Do you deliver to my city",
+        "Shipping information"
+      ],
+      "responses": [
+        "Delivery takes 3-5 working days. Shipping is free on orders above Rs. 500."
+      ]
     },
     {
       "tag": "account",
-      "patterns": ["I forgot my password", "Reset my password", "How do I change my password", "I cannot login", "Unable to log in to my account", "How do I create an account", "Sign up", "Update my account details"],
-      "responses": ["Use the 'Forgot Password' option on the login page to reset your password. You can manage your details in 'My Account'."]
+      "patterns": [
+        "I forgot my password",
+        "Reset my password",
+        "How do I change my password",
+        "I cannot login",
+        "Unable to log in to my account",
+        "How do I create an account",
+        "Sign up",
+        "Update my account details"
+      ],
+      "responses": [
+        "Use the 'Forgot Password' option on the login page to reset your password. You can manage your details in 'My Account'."
+      ]
     },
     {
       "tag": "contact",
-      "patterns": ["Contact support", "Customer care number", "How can I contact you", "Talk to a human", "I want to speak to an agent", "Support email", "Phone number"],
-      "responses": ["You can reach our support team at support@example.com or call 1800-123-456 between 9 AM and 6 PM."]
+      "patterns": [
+        "Contact support",
+        "Customer care number",
+        "How can I contact you",
+        "Talk to a human",
+        "I want to speak to an agent",
+        "Support email",
+        "Phone number"
+      ],
+      "responses": [
+        "You can reach our support team at support@example.com or call 1800-123-456 between 9 AM and 6 PM."
+      ]
     },
     {
       "tag": "complaint",
-      "patterns": ["I have a complaint", "I received a damaged product", "I got the wrong item", "The product is defective", "I am not satisfied with the service", "My item is broken", "Bad service"],
-      "responses": ["We are sorry for the inconvenience. Please share your order ID and we will resolve the issue as soon as possible."]
+      "patterns": [
+        "I have a complaint",
+        "I received a damaged product",
+        "I got the wrong item",
+        "The product is defective",
+        "I am not satisfied with the service",
+        "My item is broken",
+        "Bad service"
+      ],
+      "responses": [
+        "We are sorry for the inconvenience. Please share your order ID and we will resolve the issue as soon as possible."
+      ]
     },
     {
       "tag": "bot_identity",
-      "patterns": ["Who are you", "What is your name", "Are you a bot", "Are you a human", "What can you do", "How can you help me", "Help", "I need help"],
-      "responses": ["I am a customer service chatbot. I can help with orders, refunds, payments, shipping and account queries."]
+      "patterns": [
+        "Who are you",
+        "What is your name",
+        "Are you a bot",
+        "Are you a human",
+        "What can you do",
+        "How can you help me",
+        "Help",
+        "I need help"
+      ],
+      "responses": [
+        "I am a customer service chatbot. I can help with orders, refunds, payments, shipping and account queries."
+      ]
     }
   ]
 }
