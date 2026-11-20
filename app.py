@@ -3,12 +3,13 @@ import json
 import random
 import pickle
 import streamlit as st
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 
 st.set_page_config(page_title="Customer Service Chatbot", page_icon="🤖")
 st.title("Customer Service Chatbot 🤖")
 
 FALLBACK = "Sorry, I didn't understand that. Can you rephrase?"
-MIN_KNOWN_WORDS = 0.6      # at least 60% of the words must be known to the model
+MIN_KNOWN_RATIO = 0.6       # at least 60% of the meaningful words must be known
 CONFIDENCE_THRESHOLD = 0.4
 
 
@@ -24,27 +25,25 @@ def load_files():
 model, vectorizer, intents = load_files()
 
 
-def is_known_text(text):
-    """Return True if most words of the message exist in the training vocabulary."""
+def is_understandable(text):
+    """Check meaningful (non stop-word) words against the training vocabulary."""
     words = re.findall(r"\b\w\w+\b", text.lower())
     if not words:
         return False
-    vocab = getattr(vectorizer, "vocabulary_", {})
-    known = [w for w in words if w in vocab]
-    return len(known) / len(words) >= MIN_KNOWN_WORDS
+    content = [w for w in words if w not in ENGLISH_STOP_WORDS]
+    if not content:          # only common words like "what can you do"
+        return True
+    known = [w for w in content if w in vectorizer.vocabulary_]
+    return len(known) / len(content) >= MIN_KNOWN_RATIO
 
 
 def get_response(text):
-    # Unrelated question (most words are unknown) -> fallback
-    if not is_known_text(text):
+    if not is_understandable(text):
         return FALLBACK
 
     X = vectorizer.transform([text])
-
-    # Low model confidence -> fallback
-    if hasattr(model, "predict_proba"):
-        if model.predict_proba(X).max() < CONFIDENCE_THRESHOLD:
-            return FALLBACK
+    if model.predict_proba(X).max() < CONFIDENCE_THRESHOLD:
+        return FALLBACK
 
     tag = model.predict(X)[0]
     for intent in intents["intents"]:
